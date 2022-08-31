@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Lalezar&family=Montserrat:wght@200&family=Orbitron&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto&family=Roboto+Mono:ital,wght@1,300&family=Source+Sans+Pro&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2196f3;
+  font-family: "Source Sans Pro";
+}
+.container {
+  width: 320px;
+  height: 280px;
+  background-color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.clock-container,
+.digit-container,
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+#clock {
+  font-size: 26px;
+  font-weight: bold;
+}
+.input-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 4px;
+  margin: 18px 0 12px 0;
+}
+select {
+  width: 88px;
+  padding: 8px;
+  border-radius: 3px;
+  font-family: "Source Sans Pro";
+  font-size: 14px;
+}
+#setAlarm {
+  width: 85%;
+  padding: 10px;
+  border: none;
+  outline: none;
+  background-color: rgb(80, 136, 221);
+  color: white;
+  word-spacing: 2px;
+  border-radius: 3px;
+  font-family: "Source Sans Pro";
+  font-size: 16px;
+}
