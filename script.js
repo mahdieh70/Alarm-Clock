@@ -6,6 +6,7 @@ const hour = document.getElementById("hour");
 const container = document.querySelector(".container");
 const setAlarm = document.getElementById("setAlarm");
 const amPm = document.getElementById("amPm");
+const image = document.querySelector(".image");
 
 let alarmTime;
 let isRunning;
@@ -37,7 +38,8 @@ function showTime() {
   clock.innerHTML = currentTime;
   if (alarmTime == `${h}:${m} ${session}`) {
     ringTone.play();
-    ringTone.loop = false;
+    image.classList.add("imageShake");
+    ringTone.loop = true;
   }
 }
 
@@ -77,12 +79,15 @@ setAlarm.addEventListener("click", () => {
     alarmTime = "";
     ringTone.pause();
     setAlarm.textContent = "Set Alarm";
+   
+    image.classList.remove("imageShake");
     isRunning = false;
   } else {
     isRunning = true;
     let time = `${hour.value}:${minute.value} ${amPm.value}`;
     alarmTime = time;
     setAlarm.textContent = "clear Alarm";
+
     if (
       time.includes("Hours") ||
       time.includes("Minutes") ||
